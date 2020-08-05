@@ -1,6 +1,11 @@
 # web-player
 
-Empty project.
+
+https://github.com/rrweb-io/rrweb/issues/277
+
+
+
+
 
 ## Building and running on localhost
 
