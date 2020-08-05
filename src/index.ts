@@ -1,5 +1,5 @@
 import { Replayer, unpack } from '../forks/rrweb'
-import events from './response'
+import events from './response-2'
 
 import './styles.css'
 import { formatTime } from './format'
