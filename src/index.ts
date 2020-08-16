@@ -1,22 +1,14 @@
-import { Replayer, unpack } from '../forks/rrweb'
-import events from './response-2'
+import { Replayer, unpack } from 'rrweb'
 
 import './styles.css'
 import { formatTime } from './format'
+import events from './response'
 
 const container = document.getElementById('player')!
 const frame = document.getElementById('frame')!
 
 let isPlaying = false
 let timer: number
-
-function getTime() {
-  return [
-    formatTime(replayer.getCurrentTime()),
-    '/',
-    formatTime(replayer.getMetaData().totalTime) 
-  ].join(' ')
-}
 
 function updateScale(el: HTMLDivElement, dimension: any) {
 
@@ -36,6 +28,14 @@ function updateScale(el: HTMLDivElement, dimension: any) {
 
   frame.style.width = `${width}px`
   frame.style.height = `${height - 64}px`
+}
+
+function getTime() {
+  return [
+    formatTime(replayer.getCurrentTime()),
+    '/',
+    formatTime(replayer.getMetaData().totalTime) 
+  ].join(' ')
 }
 
 function loopTimer() {
