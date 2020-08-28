@@ -28,7 +28,7 @@ async function main() {
 
   const json = await response.json()
 
-  const events = json.data.EventMany.slice(0, 5).flatMap((item) => {
+  const events = json.data.EventMany.slice(0, 6).flatMap((item) => {
     return item.events.map((event) => event)
   })
 

@@ -1,4 +1,4 @@
-import { Replayer, unpack } from 'rrweb'
+import { Replayer } from '../forks/rrweb'
 
 import './styles.css'
 import { formatTime } from './format'
@@ -82,8 +82,7 @@ const replayer: Replayer = new Replayer(events, {
   skipInactive: false,
   showWarning: true,
   showDebug: true,
-  triggerFocus: true,
-  unpackFn: unpack,
+  triggerFocus: true
 })
 
 replayer.on('resize', (dimension) =>
